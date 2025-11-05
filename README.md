@@ -16,7 +16,7 @@ A Python-based LinkedIn profile scraper with Selenium automation.
 
 ---
 
-### 2. Autodialer (`/autodialer`)
+### 2. Autodialer and Blog Generator (`/autodialer_and_blog_generator`)
 A Ruby on Rails application for automated phone calling and AI blog generation.
 
 **Features:**
