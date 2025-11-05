@@ -16,7 +16,7 @@ A Python-based LinkedIn profile scraper with Selenium automation.
 
 ---
 
-### 2. Autodialer and Blog Generator (`/autodialer_and_blog_generator`)
+### 2. autodialer_and_blog_generator and Blog Generator (`/autodialer_and_blog_generator_and_blog_generator`)
 A Ruby on Rails application for automated phone calling and AI blog generation.
 
 **Features:**
@@ -36,7 +36,7 @@ A Ruby on Rails application for automated phone calling and AI blog generation.
 
 **Quick Start:**
 ```bash
-cd autodialer
+cd autodialer_and_blog_generator
 bundle install
 rails db:create db:migrate
 rails server
@@ -45,9 +45,9 @@ rails server
 Visit `http://localhost:3000`
 
 **Documentation:**
-- [Main README](autodialer/README.md) - Setup and usage
-- [Ruby Guide](autodialer/RUBY_GUIDE.md) - Ruby basics and how the app works
-- [Deployment Guide](autodialer/DEPLOYMENT.md) - Deploy to Heroku/Render/Railway
+- [Main README](autodialer_and_blog_generator/README.md) - Setup and usage
+- [Ruby Guide](autodialer_and_blog_generator/RUBY_GUIDE.md) - Ruby basics and how the app works
+- [Deployment Guide](autodialer_and_blog_generator/DEPLOYMENT.md) - Deploy to Heroku/Render/Railway
 
 **Environment Variables Required:**
 ```bash
@@ -57,7 +57,7 @@ TWILIO_PHONE_NUMBER=your_phone_number
 GEMINI_API_KEY=your_gemini_key
 ```
 
-[View Autodialer Full Documentation](autodialer/README.md)
+[View autodialer_and_blog_generator_and_blog_generator Full Documentation](autodialer_and_blog_generator_and_blog_generator/README.md)
 
 ---
 
@@ -65,7 +65,7 @@ GEMINI_API_KEY=your_gemini_key
 
 ### Prerequisites
 - Python 3.x (for LinkedIn Scraper)
-- Ruby 3.4+ (for Autodialer)
+- Ruby 3.4+ (for autodialer_and_blog_generator_and_blog_generator)
 - Git
 
 ### Clone Repository
@@ -77,13 +77,13 @@ cd AI-Automations-and-Scraping
 ### Choose Your Project
 Navigate to either project folder and follow its README:
 - `cd linkedin_scraper` for Python scraping project
-- `cd autodialer` for Ruby on Rails calling/blogging app
+- `cd autodialer_and_blog_generator_and_blog_generator` for Ruby on Rails calling/blogging app
 
 ---
 
 ## 📊 Project Comparison
 
-| Feature | LinkedIn Scraper | Autodialer |
+| Feature | LinkedIn Scraper | autodialer_and_blog_generator_and_blog_generator |
 |---------|-----------------|------------|
 | Language | Python | Ruby |
 | Framework | Selenium | Rails |
@@ -101,8 +101,8 @@ Navigate to either project folder and follow its README:
 - [Selenium Documentation](https://selenium-python.readthedocs.io/)
 - [Python Web Scraping Guide](https://realpython.com/beautiful-soup-web-scraper-python/)
 
-### For Autodialer:
-- [Ruby Guide](autodialer/RUBY_GUIDE.md) - Comprehensive Ruby basics
+### For autodialer_and_blog_generator_and_blog_generator:
+- [Ruby Guide](autodialer_and_blog_generator_and_blog_generator/RUBY_GUIDE.md) - Comprehensive Ruby basics
 - [Rails Guides](https://guides.rubyonrails.org/)
 - [Twilio Documentation](https://www.twilio.com/docs)
 - [Google Gemini API](https://ai.google.dev/docs)
