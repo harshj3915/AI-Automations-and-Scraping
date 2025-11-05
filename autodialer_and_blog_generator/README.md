@@ -74,9 +74,6 @@ GEMINI_API_KEY=your_gemini_api_key_here
 rails db:create
 rails db:migrate
 ```
-
-**Note**: If you get connection errors, see [POSTGRES_SETUP.md](POSTGRES_SETUP.md) for troubleshooting.
-
 ### 5. Start the Server
 
 ```bash
