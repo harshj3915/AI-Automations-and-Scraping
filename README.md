@@ -46,8 +46,6 @@ Visit `http://localhost:3000`
 
 **Documentation:**
 - [Main README](autodialer_and_blog_generator/README.md) - Setup and usage
-- [Ruby Guide](autodialer_and_blog_generator/RUBY_GUIDE.md) - Ruby basics and how the app works
-- [Deployment Guide](autodialer_and_blog_generator/DEPLOYMENT.md) - Deploy to Heroku/Render/Railway
 
 **Environment Variables Required:**
 ```bash
@@ -102,7 +100,6 @@ Navigate to either project folder and follow its README:
 - [Python Web Scraping Guide](https://realpython.com/beautiful-soup-web-scraper-python/)
 
 ### For autodialer_and_blog_generator_and_blog_generator:
-- [Ruby Guide](autodialer_and_blog_generator_and_blog_generator/RUBY_GUIDE.md) - Comprehensive Ruby basics
 - [Rails Guides](https://guides.rubyonrails.org/)
 - [Twilio Documentation](https://www.twilio.com/docs)
 - [Google Gemini API](https://ai.google.dev/docs)
