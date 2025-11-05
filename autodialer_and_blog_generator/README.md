@@ -21,7 +21,7 @@ A Ruby on Rails application that combines automated phone calling with AI-powere
 
 ## 📋 Prerequisites
 
-- Ruby 3.4+ installed
+-  3.4+ installed
 - Rails 8.1+ installed
 - **PostgreSQL database** (SQLite3 has Ruby 3.4 compatibility issues on Windows)
 - Twilio Account (for phone calls)
@@ -108,38 +108,6 @@ Visit `http://localhost:3000` in your browser.
 3. Format: `Title | Additional context` (context is optional)
 4. Click "Generate Posts with AI"
 
-## 🌐 Deployment
-
-### Heroku (Recommended)
-
-```bash
-heroku create your-app-name
-heroku addons:create heroku-postgresql:mini
-heroku config:set TWILIO_ACCOUNT_SID=your_sid
-heroku config:set TWILIO_AUTH_TOKEN=your_token
-heroku config:set TWILIO_PHONE_NUMBER=your_number
-heroku config:set OPENAI_API_KEY=your_key
-git push heroku main
-heroku run rails db:migrate
-heroku open
-```
-
-### Render.com
-
-1. Sign up at Render.com
-2. Click "New +" → "Web Service"
-3. Connect your Git repository
-4. Set environment variables in dashboard
-5. Deploy
-
-### Railway.app
-
-1. Sign up at Railway.app
-2. Click "New Project" → "Deploy from GitHub"
-3. Add PostgreSQL plugin
-4. Set environment variables
-5. Auto-deploys on push
-
 ## 📊 API Costs
 
 - **Twilio**: $0.013-$0.04 per minute, $15 free trial credit
@@ -167,7 +135,6 @@ gem 'pg', '~> 1.5'
 
 ## 📚 Additional Resources
 
-- See [RUBY_GUIDE.md](RUBY_GUIDE.md) for Ruby basics and how the app works
 - [Twilio Documentation](https://www.twilio.com/docs)
 - [Google Gemini API Documentation](https://ai.google.dev/docs)
 
