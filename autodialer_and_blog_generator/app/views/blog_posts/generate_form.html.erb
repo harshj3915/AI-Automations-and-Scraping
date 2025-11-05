@@ -1,0 +1,49 @@
+<h1><i class="fas fa-robot"></i> Generate Blog Posts with AI</h1>
+
+<div class="row">
+  <div class="col-md-8 mx-auto">
+    <div class="card">
+      <div class="card-body">
+        <%= form_with url: generate_blog_posts_path, method: :post, local: true do |f| %>
+          
+          <div class="mb-4">
+            <label class="form-label"><strong>Blog Post Titles</strong></label>
+            <p class="text-muted small">
+              Enter one title per line. You can optionally add details after a pipe (|) symbol.<br>
+              Example: <code>Introduction to Ruby on Rails | For beginners with Python background</code>
+            </p>
+            <%= f.text_area :titles, class: "form-control", rows: 15, 
+                placeholder: "Introduction to Ruby on Rails\nUnderstanding MVC Pattern in Web Development | With practical examples\nREST API Best Practices\nJavaScript Async/Await Explained\nDocker for Developers\nGit Workflow Strategies\nDatabase Indexing Optimization\nTest-Driven Development Guide\nMicroservices Architecture\nCI/CD Pipeline Setup", 
+                required: true %>
+          </div>
+
+          <div class="alert alert-info">
+            <h6><i class="fas fa-info-circle"></i> How it works:</h6>
+            <ul class="mb-0">
+              <li>AI will generate comprehensive articles (800+ words) for each title</li>
+              <li>Articles are automatically formatted with headings and sections</li>
+              <li>Generation takes about 5-10 seconds per article</li>
+              <li>You can generate up to 10 articles at once</li>
+            </ul>
+          </div>
+
+          <div class="d-grid gap-2">
+            <%= f.submit "Generate Posts with AI", class: "btn btn-success btn-lg", 
+                data: { confirm: "This will generate blog posts using AI. Each post takes a few seconds. Continue?" } %>
+            <%= link_to "Cancel", blog_posts_path, class: "btn btn-outline-secondary" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <!-- API Key Info -->
+    <div class="alert alert-warning mt-4">
+      <h5><i class="fas fa-key"></i> API Configuration Required</h5>
+      <p class="mb-0">
+        Make sure you have set your <code>GEMINI_API_KEY</code> environment variable.
+        You can get a free API key from <a href="https://makersuite.google.com/app/apikey" target="_blank">Google AI Studio</a>.
+        Gemini API is free for developers with generous rate limits.
+      </p>
+    </div>
+  </div>
+</div>

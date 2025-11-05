@@ -430,7 +430,7 @@ class LinkedInScraper:
             df.to_csv(config.OUTPUT_CSV, index=False, encoding='utf-8-sig')
             
             print("\n" + "=" * 60)
-            print("✅ Scraping completed!")
+            print("Scraping completed!")
             print("=" * 60)
             print(f"Total profiles scraped: {len(self.profiles_data)}")
             print(f"Data saved to: {os.path.abspath(config.OUTPUT_CSV)}")

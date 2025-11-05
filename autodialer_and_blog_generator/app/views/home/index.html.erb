@@ -1,0 +1,115 @@
+<div class="row">
+  <div class="col-12">
+    <div class="jumbotron bg-light p-5 rounded">
+      <h1 class="display-4"><i class="fas fa-robot"></i> AI Communication Hub</h1>
+      <p class="lead">Automated Phone Dialer & AI Blog Content Generator - All in One Platform</p>
+      <hr class="my-4">
+      <p>Make bulk phone calls with AI voices (Amazon Polly) and generate professional blog posts using Google Gemini AI.</p>
+      <div class="mt-4">
+        <%= link_to raw('<i class="fas fa-phone-alt"></i> Start Making Calls'), new_phone_call_path, class: "btn btn-primary btn-lg me-3" %>
+        <%= link_to raw('<i class="fas fa-pen-fancy"></i> Generate Blog Posts'), generate_form_blog_posts_path, class: "btn btn-success btn-lg" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Statistics -->
+<div class="row mt-5">
+  <div class="col-md-4">
+    <div class="card text-center">
+      <div class="card-body">
+        <i class="fas fa-phone fa-3x text-primary mb-3"></i>
+        <h3><%= @stats[:total_calls] %></h3>
+        <p class="text-muted">Total Calls Made</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card text-center">
+      <div class="card-body">
+        <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
+        <h3><%= @stats[:successful_calls] %></h3>
+        <p class="text-muted">Successful Calls</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card text-center">
+      <div class="card-body">
+        <i class="fas fa-blog fa-3x text-info mb-3"></i>
+        <h3><%= @stats[:total_posts] %></h3>
+        <p class="text-muted">Blog Posts Generated</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Recent Activity -->
+<div class="row mt-5">
+  <div class="col-md-6">
+    <h3>Recent Calls</h3>
+    <% if @recent_calls.any? %>
+      <ul class="list-group">
+        <% @recent_calls.each do |call| %>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <%= call.phone_number %>
+            <span class="badge <%= call.status == 'completed' ? 'bg-success' : 'bg-warning' %>">
+              <%= call.status %>
+            </span>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p class="text-muted">No calls made yet.</p>
+    <% end %>
+    <%= link_to "View All Calls", phone_calls_path, class: "btn btn-outline-primary mt-3" %>
+  </div>
+  
+  <div class="col-md-6">
+    <h3>Recent Blog Posts</h3>
+    <% if @recent_posts.any? %>
+      <ul class="list-group">
+        <% @recent_posts.each do |post| %>
+          <li class="list-group-item">
+            <%= link_to post.title, blog_post_path(post) %>
+            <small class="text-muted d-block"><%= post.created_at.strftime("%B %d, %Y") %></small>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p class="text-muted">No blog posts yet.</p>
+    <% end %>
+    <%= link_to "View All Posts", blog_posts_path, class: "btn btn-outline-primary mt-3" %>
+  </div>
+</div>
+
+<!-- Features -->
+<div class="row mt-5">
+  <div class="col-12">
+    <h2 class="text-center mb-4">Features</h2>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title"><i class="fas fa-robot text-primary"></i> AI Voice Calls</h5>
+        <p class="card-text">Make automated calls with natural-sounding AI voices using Amazon Polly Neural voices.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title"><i class="fas fa-brain text-success"></i> AI Commands</h5>
+        <p class="card-text">Use natural language to make calls: "Call +1234567890 and say hello".</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title"><i class="fas fa-chart-bar text-info"></i> Call Analytics</h5>
+        <p class="card-text">Track call status, duration, and success rates with detailed logs.</p>
+      </div>
+    </div>
+  </div>
+</div>
